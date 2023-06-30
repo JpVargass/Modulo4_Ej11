@@ -22,7 +22,7 @@
         android:id="@+id/btnGallery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#C9C9C9"
         android:text="Picture saved to gallery"
         app:layout_constraintStart_toStartOf="@+id/btnTurn"
@@ -32,7 +32,7 @@
         android:id="@+id/btnLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint=" #5F94D9"
         android:text="Level 4 completed"
         app:layout_constraintEnd_toEndOf="@+id/btnGallery"
@@ -47,6 +47,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="#D9525E"
         android:text="Updating profile"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnTurn"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,20 +55,23 @@
         android:id="@+id/btnLock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#484D50"
         android:text="Unlocked level 5"
+        app:layout_constraintEnd_toEndOf="@+id/btnUpdating"
         app:layout_constraintStart_toStartOf="@+id/btnUpdating"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdating" />
 
     <Button
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#49A660 "
         android:text="Music paused"
         app:layout_constraintEnd_toEndOf="@+id/btnLock"
         app:layout_constraintStart_toStartOf="@+id/btnLock"
-        tools:layout_editor_absoluteY="328dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLock" />
 
     <ImageButton
         android:id="@+id/imageButton"
