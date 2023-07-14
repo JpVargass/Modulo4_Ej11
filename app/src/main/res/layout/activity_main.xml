@@ -4,82 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E2E0E2"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnTurn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#7559D9"
-        android:drawableLeft="@drawable/baseline_airplanemode_active_24"
-        android:text="Turn off flight mode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/btn_flight_mode"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:drawableLeft="@drawable/baseline_airplanemode_inactive_24"
+        android:text="Turn off flight zone"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnGallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:id="@+id/btn_updating_profile"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#E55359"
+        android:drawableLeft="@drawable/baseline_sync_24"
+        android:text="Updating profile"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save_picture"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:backgroundTint="#C9C9C9"
         android:text="Picture saved to gallery"
-        app:layout_constraintStart_toStartOf="@+id/btnTurn"
-        app:layout_constraintTop_toBottomOf="@+id/btnTurn" />
+        android:textColor="#C06972"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_flight_mode"
+        app:layout_constraintStart_toStartOf="@+id/btn_flight_mode"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:strokeColor="#A5A4A4"
+        app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/btnLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:backgroundTint=" #5F94D9"
-        android:text="Level 4 completed"
-        app:layout_constraintEnd_toEndOf="@+id/btnGallery"
-        app:layout_constraintStart_toStartOf="@+id/btnGallery"
-        app:layout_constraintTop_toBottomOf="@+id/btnGallery" />
-
-    <Button
-        android:id="@+id/btnUpdating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#D9525E"
-        android:text="Updating profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnTurn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnLock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#484D50"
+        android:id="@+id/btn_unlock_level_5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#4B4C51"
         android:text="Unlocked level 5"
-        app:layout_constraintEnd_toEndOf="@+id/btnUpdating"
-        app:layout_constraintStart_toStartOf="@+id/btnUpdating"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdating" />
+        android:textColor="#7AB5B5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_updating_profile"
+        app:layout_constraintStart_toStartOf="@+id/btn_updating_profile"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:strokeColor="#7AB5B5"
+        app:strokeWidth="3dp" />
 
     <Button
-        android:id="@+id/btnPause"
+        android:id="@+id/btn_lvl_4_complete"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#5B89D8"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:drawableRight="@android:drawable/btn_star_big_on"
+        android:text="Level 4 completed"
+        android:textSize="16sp"
+        app:cornerRadius="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_save_picture"
+        app:layout_constraintStart_toStartOf="@+id/btn_save_picture"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/btn_music_paused"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#4EAD6F"
+        android:drawableLeft="@drawable/baseline_pause_circle_24"
+        android:text="Music paused"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_unlock_level_5"
+        app:layout_constraintStart_toStartOf="@+id/btn_unlock_level_5"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#49A660 "
-        android:text="Music paused"
-        app:layout_constraintEnd_toEndOf="@+id/btnLock"
-        app:layout_constraintStart_toStartOf="@+id/btnLock"
-        app:layout_constraintTop_toBottomOf="@+id/btnLock" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="225dp"
-        android:layout_height="291dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="181dp"
+        android:layout_height="229dp"
+        android:layout_marginStart="-24dp"
+        android:layout_marginBottom="-24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/android"
-        tools:layout_editor_absoluteX="-6dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/andy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>androidx.constraintlayout.widget.ConstraintLayout>
